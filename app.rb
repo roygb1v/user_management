@@ -1,5 +1,5 @@
 require "sinatra"
-require "sinatra/reloader"
+require "sinatra/reloader" if development?
 require "tilt/erubis"
 require "yaml"
 
@@ -23,8 +23,7 @@ helpers do
 end
 
 get "/" do
-  #redirect "/users"
-  location = "/users"
+	redirect "/users"
 end
 
 get "/users" do
