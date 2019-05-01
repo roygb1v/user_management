@@ -1,0 +1,18 @@
+<h3>Welcome to <%= @user_name.capitalize %>'s Website</h3>
+
+<h4>Contact <%= @user_name %></h4>
+
+<p><%= @email %></p>
+
+<h4>Interests</h4>
+<p><%= @interests.join(', ') %></p>
+
+<h5>Users</h5>
+
+<% @links.each do |person| %>
+  <p><a href="/<%= person %>"><%= person %></a></p>
+<% end %>
+
+"<li>hi</li>"
+
+
